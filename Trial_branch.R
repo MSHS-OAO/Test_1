@@ -23,3 +23,17 @@ Holiday_Det <- isHoliday(Yesterday, holidays = MSHS_Holiday)
 #Set up a default calendar for collect to received TAT calculations for Pathology and Cytology
 create.calendar("MSHS_working_days", MSHS_Holiday, weekdays=c("saturday","sunday"))
 bizdays.options$set(default.calendar="MSHS_working_days")
+
+
+# Select file/folder path for easier file selection and navigation
+# user_wd <- choose.dir(caption = "Select your working directory")
+#user_wd <- "J:\\deans\\Presidents\\HSPI-PM\\Operations Analytics and Optimization\\Projects\\Service Lines\\Lab KPI\\Data"
+#user_path <- paste0(user_wd, "\\*.*")
+
+if (list.files("J://") == "Presidents") {
+  user_directory <- "J:/Presidents/HSPI-PM/Operations Analytics and Optimization/Projects/Service Lines/Lab Kpi/Data"
+} else {
+  user_directory <- "J:/deans/Presidents/HSPI-PM/Operations Analytics and Optimization/Projects/Service Lines/Lab Kpi/Data"
+}
+user_path <- paste0(user_directory, "/*.*")
+
