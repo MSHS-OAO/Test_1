@@ -1,5 +1,5 @@
 # Get today and yesterday's date
-
+#### trial git fetch vs git pull
 Today <- as.timeDate(format(Sys.Date(),"%m/%d/%Y"))
 #Today <- as.timeDate(as.Date("07/29/2020", format = "%m/%d/%Y"))
 
